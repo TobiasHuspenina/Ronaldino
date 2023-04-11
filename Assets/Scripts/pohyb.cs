@@ -5,6 +5,8 @@ public class pohyb : MonoBehaviour
     public float speed = 10.0f;
     public float jumpForce = 10.0f;
     public Rigidbody2D rb;
+    private float lastJumpTime = 0.0f;
+    private float jumpCooldown = 0.5f;
 
     void Start()
     {
@@ -24,9 +26,10 @@ public class pohyb : MonoBehaviour
             {
                 transform.Translate(Vector2.right * speed * Time.smoothDeltaTime);
             }
-            if (Input.GetKeyDown(KeyCode.W))
+            if (Input.GetKeyDown(KeyCode.W) && Time.time - lastJumpTime > jumpCooldown)
             {
                 rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+                lastJumpTime = Time.time;
             }
         }
 
@@ -41,14 +44,11 @@ public class pohyb : MonoBehaviour
             {
                 transform.Translate(Vector2.right * speed * Time.smoothDeltaTime);
             }
-            if (Input.GetKeyDown(KeyCode.UpArrow))
+            if (Input.GetKeyDown(KeyCode.UpArrow) && Time.time - lastJumpTime > jumpCooldown)
             {
                 rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+                lastJumpTime = Time.time;
             }
         }
     }
 }
-
-
-
-

@@ -2,13 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
     float currentTime;
     public float startingTime = 60f;
 
-    [SerializeField] Text countdownText;
+    [SerializeField] TMP_Text countdownText;
     void Start()
     {
         currentTime = startingTime;
@@ -28,7 +30,9 @@ public class Timer : MonoBehaviour
         {
             currentTime = 0;
              countdownText.text = "0";
+             SceneManager.LoadScene(2);
             // Your Code Here
         }
     }
+
 }

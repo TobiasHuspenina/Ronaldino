@@ -260,6 +260,7 @@ GameObject:
   - component: {fileID: 212181573}
   - component: {fileID: 212181575}
   - component: {fileID: 212181574}
+  - component: {fileID: 212181576}
   m_Layer: 3
   m_Name: Cas
   m_TagString: Untagged
@@ -274,7 +275,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 212181572}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -384,6 +385,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 212181572}
   m_CullTransparentMesh: 1
+--- !u!114 &212181576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212181572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc409f5dbf4603343a7e161785ac7381, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingTime: 60
+  countdownText: {fileID: 212181574}
 --- !u!1001 &224130860
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ObjectCollision : MonoBehaviour
+public class GoalControll : MonoBehaviour
 {
     
 
@@ -14,4 +14,12 @@ public class ObjectCollision : MonoBehaviour
         
     }
 
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Mic")
+        {
+            Debug.Log("Object with tag 'Mic' touched the collider.");
+
+        }
+    }
 }

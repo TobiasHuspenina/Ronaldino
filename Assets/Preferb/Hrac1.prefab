@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 8013070723460361517}
   - component: {fileID: 8013070723460361516}
   - component: {fileID: 8013070723460361513}
-  - component: {fileID: 8013070723460361518}
   - component: {fileID: 8418160935564355457}
+  - component: {fileID: 1320267987}
+  - component: {fileID: 1320267982}
   m_Layer: 0
   m_Name: Hrac1
   m_TagString: Player1
@@ -102,14 +103,29 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 4
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!61 &8013070723460361518
-BoxCollider2D:
+  m_Constraints: 4
+--- !u!114 &8418160935564355457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451822752929126073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe25f7ea5f6a5b74e8393d4235d785ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 7
+  jumpForce: 10
+  rb: {fileID: 0}
+--- !u!60 &1320267987
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -131,10 +147,18 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.32, y: 0.32}
-  m_EdgeRadius: 0
---- !u!114 &8418160935564355457
+  m_Points:
+    m_Paths:
+    - - {x: 0.0064820126, y: 0.18454131}
+      - {x: -0.06581509, y: 0.14852151}
+      - {x: -0.063135624, y: 0.042698026}
+      - {x: -0.109234214, y: 0.013828494}
+      - {x: -0.10867321, y: -0.13734642}
+      - {x: 0.12734653, y: -0.13923422}
+      - {x: 0.12989926, y: 0.013013661}
+      - {x: 0.0924958, y: 0.04259795}
+      - {x: 0.087702885, y: 0.14489767}
+--- !u!114 &1320267982
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,9 +167,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1451822752929126073}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe25f7ea5f6a5b74e8393d4235d785ef, type: 3}
+  m_Script: {fileID: 11500000, guid: 12e4ef97c8d06344a8e93ec7d50c037a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  jumpForce: 10
-  rb: {fileID: 0}

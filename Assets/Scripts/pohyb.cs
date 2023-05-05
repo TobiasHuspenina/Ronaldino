@@ -15,7 +15,7 @@ public class pohyb : MonoBehaviour
 
     void Update()
     {
-        // Hráè 1
+        // Hrï¿½ï¿½ 1
         if (gameObject.tag == "Player1")
         {
             if (Input.GetKey(KeyCode.A))
@@ -33,7 +33,7 @@ public class pohyb : MonoBehaviour
             }
         }
 
-        // Hráè 2
+        // Hrï¿½ï¿½ 2
         if (gameObject.tag == "Player2")
         {
             if (Input.GetKey(KeyCode.LeftArrow))
